@@ -86,10 +86,18 @@ export default function MapSection() {
   }
 
   return (
-    <section className="container mx-auto my-12 px-4">
+    <section className="container py-24 sm:py-32">
+      <div className="mb-8 text-center">
+        <h2 className="text-lg text-primary mb-2 tracking-wider">
+          Investment Map
+        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Explore Investment Regions
+        </h2>
+      </div>
+
       <div className="mb-8">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-3xl font-bold">Explore Investment Regions</h2>
+        <div className="flex justify-end mb-4">
           {data && data.province_name !== 'Bali' && (
             <Button variant="outline" onClick={reset}>
               Reset to Default
@@ -97,13 +105,13 @@ export default function MapSection() {
           )}
         </div>
         
-        <div className="bg-slate-50/50 p-1 rounded-xl">
+        <div className="bg-muted/50 dark:bg-card p-2 rounded-xl border border-border">
           <SearchForm onSearch={handleSearch} isLoading={isLoading} />
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[520px]">
-        <div className="h-full">
+        <div className="h-full rounded-xl overflow-hidden border border-border">
           <MapIndonesia highlightedCode={highlightedCode} coordinates={coordinates} />
         </div>
 

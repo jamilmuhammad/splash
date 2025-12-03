@@ -56,7 +56,7 @@ export default function MapIndonesia({ highlightedCode, coordinates }: MapProps)
   };
 
   return (
-    <div className="h-full w-full rounded-xl overflow-hidden shadow-inner border border-slate-200 bg-slate-100 relative z-0">
+    <div className="h-full w-full bg-muted relative z-0">
       <MapContainer 
         center={[-2.5, 118]} 
         zoom={5} 
@@ -76,7 +76,7 @@ export default function MapIndonesia({ highlightedCode, coordinates }: MapProps)
       </MapContainer>
       
       {/* Overlay Notice for MVP */}
-      <div className="absolute bottom-4 left-4 bg-white/90 p-2 text-xs rounded z-[400]">
+      <div className="absolute bottom-4 left-4 bg-background/90 p-2 text-xs rounded z-[400] shadow-sm border border-border">
         * Showing simplified data
       </div>
     </div>

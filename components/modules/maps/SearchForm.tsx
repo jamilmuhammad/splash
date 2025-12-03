@@ -52,7 +52,7 @@ export function SearchForm({ onSearch, isLoading }: SearchFormProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 p-4 bg-card rounded-lg border shadow-sm">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 p-4 bg-background rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -116,7 +116,7 @@ export function SearchForm({ onSearch, isLoading }: SearchFormProps) {
         />
 
         <div className="flex justify-end">
-          <Button type="submit" className="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700" disabled={isLoading}>
+          <Button type="submit" className="w-full md:w-auto" disabled={isLoading}>
             {isLoading ? "Analyzing..." : "Find Best Match"}
           </Button>
         </div>
